@@ -2,8 +2,7 @@ use std::fs;
 
 fn main() {
     let file_path: &str = "D:\\source\\aoc2024\\aoc\\src\\day1.txt";
-    let contents: String = fs::read_to_string(file_path)
-        .expect("Could not read file");
+    let contents: String = fs::read_to_string(file_path).expect("Could not read file");
 
     let lines: std::str::Split<'_, &str> = contents.split("\n");
     let mut col_1: Vec<i32> = Vec::new();
@@ -31,5 +30,4 @@ fn main() {
         sim_score += val * occurrences as i32;
     }
     println!("Total similarity score is {}", sim_score);
-
 }
